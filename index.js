@@ -124,6 +124,11 @@ var addExtraOptions = function( validOptionsArray, options, addRevProp ) {
 						options.params.push('--quiet');
 					}
 					break;
+				case 'verbose ':
+					if ( options.quiet ) {
+						options.params.push('--verbose');
+					}
+					break;
 				case 'revision':
 					if ( options.revision ) {
 						options.params.push('--revision',options.revision.toString());
@@ -463,7 +468,7 @@ var log = function( targets, options, callback ) {
 		options = null;
 	}
 	options = options || {};
-	addExtraOptions( [ 'quiet', 'depth', 'revision' ], options );
+	addExtraOptions( [ 'quiet', 'depth', 'revision', 'verbose' ], options );
 	executeSvnXml( [ 'log' ].concat( targets ), options, callback );
 };
 exports.commands.log = log;
