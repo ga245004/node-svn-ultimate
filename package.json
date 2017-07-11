@@ -42,6 +42,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "docs": "jsdoc2md ./index.js > api.md"
+    "docs": "jsdoc2md ./index.js > api.md",
+    "save": "git push origin master",
+    "update": "git pull origin master"
   }
 }
