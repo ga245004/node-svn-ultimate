@@ -125,7 +125,7 @@ var addExtraOptions = function( validOptionsArray, options, addRevProp ) {
 					}
 					break;
 				case 'verbose':
-					if ( options.quiet ) {
+					if ( options.verbose ) {
 						options.params.push('--verbose');
 					}
 					break;
